@@ -99,14 +99,14 @@ Yes, total emissions have decreased in the US from 1999 to 2008.
 
 ### Question 2
 Plot created in two steps:
-1.Aggregate total emissions from PM2.5 for Baltimore City, Maryland (fips="24510") from 1999 to 2008.
+1. Aggregate total emissions from PM2.5 for Baltimore City, Maryland (fips="24510") from 1999 to 2008.
 
 ```r
 baltimoreNEI <- NEI[NEI$fips=="24510",]
 aggTotalsBaltimore <- aggregate(Emissions ~ year, baltimoreNEI,sum)
 ```
 
-2. Using base plotting system we making a plot to show this data
+2. Using base plotting system we make a plot to show this data
 
 
 ```r
