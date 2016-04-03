@@ -260,12 +260,12 @@ Los Angeles County has seen the greatest changes over time in motor vehicle emis
 
 ## Steps to work on this course project
 
-1. Put ```plot1.R``` or another in your current work directory (command getwd() help you to get your current wd, setwd() to change wd).
-2. Run in RStudio ```source("plot1.R")```.
+1. Put ```plot1.R``` or another ```plot*1-6*.R``` file in your current work directory (command getwd() help you to get your current wd, setwd() to change wd).
+2. Run in RStudio ```source("plot*1-6*.R")```.
 3. Download and unzip the dataset into a ```data``` folder in your current work directory. You'll have a ```data\*.zip``` folder structure.
 Or just run function download_data_set() that will make all required operations to download and unzip archive.
-Function is available after you run ```plot1.R```
-4. Run generate_first_plot() function, then it will generate a new plot file in your work directory.
+Function is available after you run ```plot*1-6*.R```
+4. Run generate_*first/second/third/forth/fifth/six*_plot() function, then it will create a png file in your work directory.
 
 
 ## Dependencies
