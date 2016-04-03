@@ -77,6 +77,7 @@ You must address the following questions and tasks in your exploratory analysis.
 
 ### Question 1
 Plot creates in two steps:
+
 1.aggregate the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
 
 ```r
@@ -101,14 +102,15 @@ Yes, total emissions have decreased in the US from 1999 to 2008.
 
 ### Question 2
 Plot created in two steps:
-1. Aggregate total emissions from PM2.5 for Baltimore City, Maryland (fips="24510") from 1999 to 2008.
+
+1.Aggregate total emissions from PM2.5 for Baltimore City, Maryland (fips="24510") from 1999 to 2008.
 
 ```r
 baltimoreNEI <- NEI[NEI$fips=="24510",]
 aggTotalsBaltimore <- aggregate(Emissions ~ year, baltimoreNEI,sum)
 ```
 
-2. Using base plotting system we make a plot to show this data.
+2.Using base plotting system we make a plot to show this data.
 
 
 ```r
@@ -155,7 +157,7 @@ Also note that the `point` source saw a significant increase until 2005 at which
 
 ### Question 4
 Plot makes in 2 steps:
-1. Subset coal combustion source factors NEI data.
+1.Subset coal combustion source factors NEI data.
 
 
 ```r
@@ -167,7 +169,7 @@ combustionSCC <- SCC[coalCombustion,]$SCC
 combustionNEI <- NEI[NEI$SCC %in% combustionSCC,]
 ```
 
-2. Build a plot using ggplot2 system.
+2.Build a plot using ggplot2 system.
 
 ```r
 
@@ -191,7 +193,7 @@ Eg. Emissions from coal combustion related sources have decreased by about 1/3 f
 
 ### Question 5
 How does plot is made:
-1. Subset the motor vehicles, which we assume is anything like Motor Vehicle in SCC.Level.Two..
+1.Subset the motor vehicles, which we assume is anything like Motor Vehicle in SCC.Level.Two..
 
 ```r
 vehicles <- grepl("vehicle", SCC$SCC.Level.Two, ignore.case=TRUE)
@@ -199,15 +201,13 @@ vehiclesSCC <- SCC[vehicles,]$SCC
 vehiclesNEI <- NEI[NEI$SCC %in% vehiclesSCC,]
 ```
 
-2. Subset for motor vehicles in Baltimore.
-
+2.Subset for motor vehicles in Baltimore.
 
 ```r
 baltimoreVehiclesNEI <- vehiclesNEI[vehiclesNEI$fips==24510,]
 ```
 
-3. Make a plot using ggplot2.
-
+3.Make a plot using ggplot2.
 
 ```r
 
@@ -229,7 +229,8 @@ Yes, emissions from motor vehicle sources have dropped from 1999-2008 in Baltimo
 
 Comparing emissions from motor vehicle sources in Baltimore City (fips == "24510") with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"),
 
-1. Subset motor vehicle data by fips.
+1.Subset motor vehicle data by fips.
+
 ```r
 vehiclesBaltimoreNEI <- vehiclesNEI[vehiclesNEI$fips == 24510,]
 vehiclesBaltimoreNEI$city <- "Baltimore City"
@@ -238,8 +239,7 @@ vehiclesLANEI$city <- "Los Angeles County"
 bothNEI <- rbind(vehiclesBaltimoreNEI,vehiclesLANEI)
 ```
 
-2. Plot data using ggplot2 system.
-
+2.Plot data using ggplot2 system.
 
 ```r
 library(ggplot2)
