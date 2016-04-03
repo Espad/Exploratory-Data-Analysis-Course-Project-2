@@ -270,5 +270,5 @@ Function is available after you run ```plot*1-6*.R```
 
 ## Dependencies
 
-```run_analysis.R``` file will help you to install the dependencies automatically. It depends on ```data.table``` and ```dplyr```. 
+```run_analysis.R``` file will help you to install the dependencies automatically. It depends on ```ggplot2```. 
 Development environment: Windows 8.1 x64, R version 3.2.2, RStudio Version 0.99.489.
