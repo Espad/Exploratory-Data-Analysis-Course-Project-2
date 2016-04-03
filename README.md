@@ -153,7 +153,7 @@ Also note that the `point` source saw a significant increase until 2005 at which
 
 ### Question 4
 Plot makes in 2 steps:
-1. subset coal combustion source factors NEI data.
+1. Subset coal combustion source factors NEI data.
 
 
 ```r
@@ -188,7 +188,7 @@ Yes, emissions from coal combustion-related sources have decreased from 6 * 10^6
 Eg. Emissions from coal combustion related sources have decreased by about 1/3 from 1999-2008!
 
 ### Question 5
-How does plot makes:
+How does plot is made:
 1. Subset the motor vehicles, which we assume is anything like Motor Vehicle in SCC.Level.Two.
 
 ```r
